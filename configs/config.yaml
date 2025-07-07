@@ -1,0 +1,24 @@
+data:
+  train_dir: /data/taoxuefeng/PRCV/PRCV/train
+  val_dir: /data/taoxuefeng/PRCV/PRCV/val
+  modalities: [vis, nir, cp, sk, text]
+  text_json: text_annos.json
+model:
+  backbone: resnet50
+  text_encoder: bert
+  fusion: gated
+train:
+  batch_size: 64
+  epochs: 60
+  lr: 0.0003
+  optimizer: adam
+  loss: triplet
+  device: cuda
+  num_workers: 4
+  num_instances: 4
+  use_triplet: true
+  triplet_margin: 0.3
+  use_contrastive: true
+output:
+  save_dir: output/
+  csv_path: output/result.csv 
