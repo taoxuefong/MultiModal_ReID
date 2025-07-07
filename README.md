@@ -1,4 +1,4 @@
-# PRCV_MultiModal_ReID
+# MultiModal_ReID
 
 本项目支持RGB、红外、彩铅、素描、文本五种模态，支持模态缺失和多模态组合检索，参考MMANet的模态缺失处理方法，并新增文本模态支持。
 
